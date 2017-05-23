@@ -1,0 +1,6 @@
+#MFC ignore files
+Debug/
+*.sdf
+release/
+Release/
+ipch/
