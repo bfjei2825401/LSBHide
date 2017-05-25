@@ -22,7 +22,7 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{F4ABEC88-EFE8-4150-A626-BACC3D6FA437}</ProjectGuid>
     <RootNamespace>LSBHide</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.14393.0</WindowsTargetPlatformVersion>
     <Keyword>MFCProj</Keyword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -186,6 +186,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\bjtu\duo\课程实验\lsb\MyBMP\MyBMP.h" />
     <ClInclude Include="LSBHide.h" />
     <ClInclude Include="LSBHideDlg.h" />
     <ClInclude Include="Resource.h" />
@@ -193,6 +194,10 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\bjtu\duo\课程实验\lsb\MyBMP\BMPexamples.cpp" />
+    <ClCompile Include="..\..\..\bjtu\duo\课程实验\lsb\MyBMP\main.cpp" />
+    <ClCompile Include="..\..\..\bjtu\duo\课程实验\lsb\MyBMP\MyBMP.cpp" />
+    <ClCompile Include="bmp.cpp" />
     <ClCompile Include="LSBHide.cpp" />
     <ClCompile Include="LSBHideDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
