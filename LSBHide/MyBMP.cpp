@@ -1,7 +1,7 @@
 // MyBMP.cpp: implementation of the MyBMP class.
 //
 //////////////////////////////////////////////////////////////////////
-
+#include "stdafx.h"
 #include "stdio.h"
 #include <iostream>
 #include <fstream>

@@ -3,7 +3,8 @@
 //
 
 #pragma once
-
+#include "afxwin.h"
+#include "MyBMP.h"
 
 // CLSBHideDlg ¶Ô»°¿ò
 class CLSBHideDlg : public CDialogEx
@@ -31,5 +32,19 @@ protected:
 	afx_msg HCURSOR OnQueryDragIcon();
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnStnClickedTextLength();
+	afx_msg void OnReadClick();
+private:
+	CString getWorkDir();
+	void setPicture(int pictureControlID, CString imageFilePath, int pos);
+	char* CStringToChar(CString csStr);
+	CStatic m_srcBMP;
+	CStatic m_dstBMP;
+	CString m_BMPFileTitle;
+	CString m_BMPFilePath;
+	int m_maxLen;
+	MyBMP* m_srcMyBMP;
+public:
+	afx_msg void OnSaveClick();
+	afx_msg void OnHideClick();
+	afx_msg void OnExtractClick();
 };

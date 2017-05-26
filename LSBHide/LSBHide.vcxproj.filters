@@ -33,7 +33,7 @@
     <ClInclude Include="Resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\bjtu\duo\课程实验\lsb\MyBMP\MyBMP.h">
+    <ClInclude Include="MyBMP.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -47,16 +47,7 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="bmp.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\bjtu\duo\课程实验\lsb\MyBMP\MyBMP.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\bjtu\duo\课程实验\lsb\MyBMP\main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\bjtu\duo\课程实验\lsb\MyBMP\BMPexamples.cpp">
+    <ClCompile Include="MyBMP.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

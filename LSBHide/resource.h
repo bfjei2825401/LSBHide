@@ -6,6 +6,7 @@
 #define IDR_MAINFRAME                   128
 #define IDR_MENU1                       130
 #define IDC_EDIT1                       1000
+#define IDC_EDIT_INFO                   1000
 #define IDC_TEXT_LENGTH                 1002
 #define IDC_SRC_IMG                     1004
 #define IDC_DST_IMG                     1005
