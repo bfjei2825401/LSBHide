@@ -112,8 +112,8 @@ void CLSBHideDlg::OnReadClick()
 
 		const char* p = CStringToChar(m_BMPFilePath);
 		m_srcMyBMP = new MyBMP(p);
-		m_maxLen = m_srcMyBMP->length();
-		len.Format(L"%d", m_srcMyBMP->length());
+		m_maxLen = m_srcMyBMP->length() / 8;
+		len.Format(L"%d", m_maxLen);
 		GetDlgItem(IDC_TEXT_LENGTH)->SetWindowTextW(len);
 	}
 
@@ -213,7 +213,9 @@ void CLSBHideDlg::OnExtractClick()
 {
 	// TODO: 在此添加命令处理程序代码
 	if (m_srcMyBMP != NULL) {
-		CString text(m_srcMyBMP->readlsb());
+		const char *pChar = m_srcMyBMP->readlsb();
+		USES_CONVERSION;
+		CString text = A2T(pChar);
 		GetDlgItem(IDC_EDIT_INFO)->SetWindowTextW(text);
 	}
 }
