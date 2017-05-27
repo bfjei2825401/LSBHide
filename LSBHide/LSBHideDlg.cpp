@@ -51,6 +51,7 @@ BOOL CLSBHideDlg::OnInitDialog()
 
 	// TODO: 在此添加额外的初始化代码
 	m_srcMyBMP = NULL;
+	m_maxLen = 0;
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
@@ -111,7 +112,7 @@ void CLSBHideDlg::OnReadClick()
 
 		const char* p = CStringToChar(m_BMPFilePath);
 		m_srcMyBMP = new MyBMP(p);
-
+		m_maxLen = m_srcMyBMP->length();
 		len.Format(L"%d", m_srcMyBMP->length());
 		GetDlgItem(IDC_TEXT_LENGTH)->SetWindowTextW(len);
 	}

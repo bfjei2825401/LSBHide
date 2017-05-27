@@ -195,8 +195,13 @@ void MyBMP::save(const char* filename)
 	fstream writefile(filename, ios::binary|ios::out);
 	writefile.write((char*)(&fileheader), sizeof(fileheader));//读取位图头文件数据结构
 	writefile.write((char*)(&infoheader), sizeof(infoheader));//读取位图头文件数据结构
-	//int biWidthEx = int((infoheader.biWidth + 3) / 4) * 4;
-	int biWidthEx = infoheader.biWidth;
+
+	if (infoheader.biBitCount < 24)							//判断是否有调色板，如果有的话读取调色板
+	{
+		writefile.write((char*)(quad), sizeof(RGBQUAD)*numQuad);
+	}
+	int biWidthEx = int((infoheader.biWidth + 3) / 4) * 4;
+	//int biWidthEx = infoheader.biWidth;
 	int numPixel = infoheader.biHeight * biWidthEx * infoheader.biBitCount / 8;
 	writefile.write((char*)(imagedata), numPixel);						//读取位图数据
 	writefile.close();
